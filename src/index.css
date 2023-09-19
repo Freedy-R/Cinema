@@ -1,3 +1,6 @@
+:root{
+  --background: linear-gradient(149deg, rgba(2,0,36,1) 10%, rgba(121,9,112,1) 50%, rgba(0,212,255,1) 88%);
+}
 *,*::before,*::after{
   margin: 0;
   padding: 0;
@@ -5,10 +8,22 @@
   color: white;
 }
 body{
-  background-color: rgb(41, 40, 40);
+  background: var(--background);
+  background-size: 250% 100%;
   min-height: 100vh;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 .cinema{
-  display: grid;
   min-height: 100vh;
 }

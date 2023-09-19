@@ -1,0 +1,21 @@
+.Navbar{
+    display: flex;
+    padding: 1rem;
+    gap: 10px;
+}
+.Navbar .logo_section{
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    gap: 3px;
+    margin-right: auto
+}
+.Search_bar{
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    background-color: transparent;
+}
+.hidden{
+    display: none;
+}
