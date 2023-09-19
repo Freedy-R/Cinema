@@ -1,8 +1,10 @@
+
+import Navbar from "./Components/Navbar";
 function Cinema() {
   return (
-    <>
-      KINO
-    </>
+    <div className="cinema">
+      <Navbar></Navbar>
+    </div>
   );
 }
 
