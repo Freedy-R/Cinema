@@ -1,0 +1,28 @@
+.MoviesSection{
+    display: grid;
+    grid-template-rows: 300px 1fr;   
+}
+
+.MoviesBanner{
+    position: relative;
+    z-index: -1;
+    padding: 1rem;
+}
+.MoviesBanner img{
+    width: 100%;
+    height: 100%;
+}
+.moviesSection_Photo{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+}
+.moviePhoto{
+    display: grid;
+    place-items: center;
+    z-index: -1;
+    position: relative;
+}
+.moviePhoto img{
+    width: 100%;
+    clip-path: inset(0 15% 0 15% round 10%);
+}
