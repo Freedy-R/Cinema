@@ -27,3 +27,10 @@ body{
 .cinema{
   min-height: 100vh;
 }
+button{
+  background-color: transparent;
+  border: 0;
+}
+.hidden{
+  display: none;
+}
