@@ -1,6 +1,7 @@
 import { useState } from "react";
 import burger_menu from "../icons/burger-menu.png";
 import MovieCategories from "./movies-categories";
+import "./burger-menu.css";
 const BurgerMenuButton = () => {
   const [isActive, setIsActive] = useState(false);
   const burger_menuClick = (event) => {
