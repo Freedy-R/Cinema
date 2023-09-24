@@ -10,6 +10,7 @@
 img,svg{
   aspect-ratio: 16/9;
 }
+
 body{
   background: var(--background);
   background-size: 250% 100%;
