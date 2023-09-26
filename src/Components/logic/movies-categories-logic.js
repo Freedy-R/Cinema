@@ -1,9 +1,5 @@
 import { useState } from "react";
 
-/**
- * Description
- * @returns {any}
- */
 const MovieCategories = () => {
     const [moviesCategory, setMoviesCategory] = useState({moviesCategory1:'Horror',moviesCategory2:'Komedia'});
     const moviesCategories = Object.values(moviesCategory);

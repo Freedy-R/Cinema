@@ -1,7 +1,8 @@
 import { useState } from "react";
-import burger_menu from "../icons/burger-menu.png";
-import MovieCategories from "./movies-categories";
-import "./burger-menu.css";
+import burgerMenu_Icon from "../icons/burger-menu.png";
+import MovieCategoryList from "./movies-categories-logic";
+import "./logic_style/burger-menu.css";
+
 const BurgerMenuButton = () => {
   const [isActive, setIsActive] = useState(false);
   const burger_menuClick = (event) => {
@@ -12,9 +13,9 @@ const BurgerMenuButton = () => {
   }
   return (
     <button onClick={burger_menuClick}>
-      <img className="burger_menu_logo" src={burger_menu} alt="menu"></img>
+      <img className="burger_menu_logo" src={burgerMenu_Icon} alt="menu"></img>
       <section onClick={holdWindowVisible} className={isActive ? 'burger_menu_movies_section slide' : 'burger_menu_movies_section hidden'}>
-        <MovieCategories></MovieCategories>
+        <MovieCategoryList></MovieCategoryList>
       </section>
     </button>
   );

@@ -1,4 +1,4 @@
-import "./MoviesSection.css";
+import "./style/MoviesSection.css";
 import MovieSectionMovies from "./logic/movies-section-logic";
 import cat from "./icons/kfl9dvlt.bmp";
 const MoviesSection = () => {

@@ -12,7 +12,8 @@
     grid-auto-flow: column;
     place-items: center;
     gap: 3px;
-    margin-right: auto
+    margin-right: auto;
+    transform: translateY(-5px);
 }
 .Navbar .logo_section::before{
     content: "";
@@ -25,12 +26,4 @@
     height: 15%;
     background-color: blue;
     z-index: 0;
-}
-
-
-.Search_bar{
-    font-size: 1rem;
-    color: white;
-    text-align: center;
-    background-color: transparent;
 }
