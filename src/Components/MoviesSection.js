@@ -8,7 +8,8 @@ const MoviesSection = () => {
         <img src={cat}></img>
       </section>
       <section className="moviesSection_Photo">
-        <MovieSectionMovies></MovieSectionMovies>
+        <MovieSectionMovies>
+        </MovieSectionMovies>
       </section>
     </section>
   );

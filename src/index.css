@@ -38,3 +38,6 @@ button{
 .hidden{
   display: none;
 }
+h1{
+  font-size: 1.2rem;
+}
