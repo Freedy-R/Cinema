@@ -1,6 +1,6 @@
 import React, { createElement, useState } from "react";
 import search from "../icons/search.png";
-import ActiveSearch from "./activeSearch-logic";
+import ActiveSearch from "./activeSearch-logic"; // Poprawny import
 
 const Search = () => {
   const [showSearch, setShowSearch] = useState(false);
@@ -11,12 +11,12 @@ const Search = () => {
 
   return (
     <>
-    {showSearch && <ActiveSearch/>}
+      {showSearch && <ActiveSearch />} {/* Wyświetl ActiveSearch, jeśli showSearch jest true */}
       <button onClick={ToggleSearch} id="search_button">
         <img src={search} alt="wyszukaj" />
-      </button>  
+      </button>
     </>
   );
-}
+};
 
 export default Search;
