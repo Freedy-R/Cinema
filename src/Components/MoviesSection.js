@@ -1,17 +1,17 @@
 import "./style/MoviesSection.css";
 import MovieSectionMovies from "./logic/movies-section-logic";
+import { MoviesSectionStyle, MoviesBanner, MoviesSectionPhotoStyle } from "./style/MovieSectionStyle";
 import cat from "./icons/kfl9dvlt.bmp";
 const MoviesSection = () => {
   return (
-    <section className="MoviesSection">
-      <section className="MoviesBanner">
-        <img src={cat}></img>
-      </section>
-      <section className="moviesSection_Photo">
-        <MovieSectionMovies>
-        </MovieSectionMovies>
-      </section>
-    </section>
+    <MoviesSectionStyle>
+      <MoviesBanner>
+        <img src={cat} alt="banner"></img>
+      </MoviesBanner>
+      <MoviesSectionPhotoStyle>
+        <MovieSectionMovies />
+      </MoviesSectionPhotoStyle>
+    </MoviesSectionStyle>
   );
 };
 export default MoviesSection;

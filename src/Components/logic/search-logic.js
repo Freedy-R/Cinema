@@ -1,4 +1,4 @@
-import React, { createElement, useState } from "react";
+import React, { useState } from "react";
 import search from "../icons/search.png";
 import ActiveSearch from "./activeSearch-logic"; // Poprawny import
 

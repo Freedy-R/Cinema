@@ -28,8 +28,8 @@ fetch(url, options)
   const renderMovies = () => {
     return moviesAll.map((movie, index) => (
       <div key={index} className="moviePhoto">
+        { <img src={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} alt={movie}></img> }
         <p>{movie.title}</p>
-        { <img src={"https://image.tmdb.org/t/p/w500/"+movie.poster_path}></img> }
       </div>
     ));
   };
