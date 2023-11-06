@@ -1,10 +1,26 @@
 import Navbar from "./Components/Navbar";
 import MoviesSection from "./Components/MoviesSection";
+import * as ReactDOM from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import ChoosenMovie from "./Components/ChoosenMovie";
+const router = createBrowserRouter([
+  {
+    path: "/choosenMovie",
+    element: <MoviesSection/>,
+  },
+  {
+    path: "/",
+    element: <ChoosenMovie/>,
+  },
+]);
 function Cinema() {
   return (
     <section className="cinema">
       <Navbar></Navbar>
-      <MoviesSection></MoviesSection>
+      <RouterProvider router={router}/>
     </section>
   );
 }
