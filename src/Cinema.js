@@ -8,11 +8,11 @@ import {
 import ChoosenMovie from "./Components/ChoosenMovie";
 const router = createBrowserRouter([
   {
-    path: "/choosenMovie",
+    path: "/",
     element: <MoviesSection/>,
   },
   {
-    path: "/",
+    path: "/choosen",
     element: <ChoosenMovie/>,
   },
 ]);

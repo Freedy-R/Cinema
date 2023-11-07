@@ -1,14 +1,14 @@
 import cat from "./icons/kfl9dvlt.bmp";
-import { MovieChosenSection, MovieChosenSectionInfo } from "./style/ChoosenMovieStyle";
+import { MovieChosenSection, MovieChosenSectionInfo,Movie, Details } from "./style/ChoosenMovieStyle";
 const ChoosenMovie = () => {
   return (
     <>
       <MovieChosenSection>
         <MovieChosenSectionInfo>
-          <div className="movie_choosen_section_image">
+          <Movie>
             <img src={cat} alt="kot"></img>
-          </div>
-          <div>
+          </Movie>
+          <Details>
             <h2>Tytuł</h2>
             <div style={{ display: "flex", flexDirection:"row",gap: "10px", transform: "translateY(-25px)" }}>
               <span>Nowość?</span>
@@ -17,7 +17,7 @@ const ChoosenMovie = () => {
             </div>
             <span>Opis</span>
             <span>Obsada</span>
-          </div>
+          </Details>
         </MovieChosenSectionInfo>
       </MovieChosenSection>
     </>
