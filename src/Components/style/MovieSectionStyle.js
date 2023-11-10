@@ -29,15 +29,25 @@ export const MoviesSectionPhotoStyle = styled.section`
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   }
 `;
-export const moviePhoto = styled.div`
+export const MoviePhoto = styled.div`
   display: grid;
   position: relative;
   grid-auto-rows: auto 1fr;
   text-align: center;
   font-size: 1.3rem;
   border-radius: 20px;
+  
   img {
     width: 100%;
     aspect-ratio: 0;
+  }
+  a{
+    transition: scale 1s ease;
+  }
+  & a:is(:hover){
+    scale: 110%;
+  }
+  & a:is(:focus){
+    scale: 110%;
   }
 `;

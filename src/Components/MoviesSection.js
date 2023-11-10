@@ -1,4 +1,3 @@
-import "./style/MoviesSection.css";
 import MovieSectionMovies from "./logic/movies-section-logic";
 import { MoviesSectionStyle, MoviesBanner, MoviesSectionPhotoStyle } from "./style/MovieSectionStyle";
 import cat from "./icons/kfl9dvlt.bmp";

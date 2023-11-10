@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { MoviePhoto } from "../style/MovieSectionStyle";
 
 const MovieSectionMovies = () => {
   const [movies, setMovies] = useState([]);
@@ -27,12 +28,14 @@ const MovieSectionMovies = () => {
 
   const renderMovies = () => {
     return moviesAll.map((movie, index) => (
-      <Link key={movie.id} to="/Cinema/chosen">
-      <div className="moviePhoto" tabIndex={movie.id}>
+      
+      <MoviePhoto >
+        <Link tabIndex="1" key={movie.id} to="/Cinema/chosen">
         <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.title} />
         <p>{movie.title}</p>
-      </div>
-    </Link>
+        </Link>
+      </MoviePhoto>
+    
     ));
   };
   return <>{renderMovies()}</>;
