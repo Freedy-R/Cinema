@@ -30,7 +30,7 @@ const MovieSectionMovies = () => {
     return moviesAll.map((movie, index) => (
       
       <MoviePhoto >
-        <Link tabIndex="1" key={movie.id} to="/Cinema/chosen">
+        <Link tabIndex="1" key={movie.id} to={`/Cinema/chosen/${movie.id}`}>
         <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.title} />
         <p>{movie.title}</p>
         </Link>
