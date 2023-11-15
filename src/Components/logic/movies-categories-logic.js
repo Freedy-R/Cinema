@@ -1,15 +1,42 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MovieCategories = () => {
-    const [moviesCategory, setMoviesCategory] = useState({moviesCategory1:'Horror',moviesCategory2:'Komedia'});
-    const moviesCategories = Object.values(moviesCategory);
+
+  const [genres, setGenres] = useState([]);
+
+  useEffect(()=>{
+    const fetchGenres = async ()=>{
+      const url = "https://api.themoviedb.org/3/genre/movie/list?language=pl";
+      const options = {
+        method: 'GET',
+        headers: {
+          accept: 'application/json',
+          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5NTVhMzVmNmZjMzllMjZjMzBhNmVlOWQwNjdjZWY3YSIsInN1YiI6IjY1MjI3MGVhZWE4NGM3MDBhZWVlNTE2NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QiPF-6Wp-bXF_zvYMLy71Ryt3muiE0EJ6WslCE_FfEU'
+        }
+      }
+
+      try {
+        const genreResponse = await fetch(url, options);
+        const genreJson = await genreResponse.json();
+        setGenres(genreJson.genres);
+      } catch (err) {
+        console.error('error:', err);
+      };
+    }
+    fetchGenres();
+  },[]);
+
+  if(!genres){
+    return <p>Loading...</p>;
+  }
     
     const renderMoviesCategories = () =>{
-        return moviesCategories.map((movieCategory, index) => (
-          <a key={index}>
-            <p>{movieCategory}</p> 
-          </a>
-        ));
+        
+     return genres.map(genre=>(
+      <a key={genre.id} href="#">
+        <p>{genre.name}</p>
+      </a>
+      ));
     }
     return(
         <>

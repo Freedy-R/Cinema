@@ -12,6 +12,8 @@ const ActiveSearch = () => {
       hideTimeoutRef.current = setTimeout(() => {
         setVisible(false);
       }, 3000);
+
+      
     }
     return () => clearTimeout(hideTimeoutRef.current);
   }, [inputValue]);
