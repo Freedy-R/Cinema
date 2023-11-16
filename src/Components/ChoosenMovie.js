@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { MovieChosenSection, MovieChosenSectionInfo, Movie, Details, Act, Actors, ActorsSection} from "./style/ChoosenMovieStyle";
+import { MovieChosenSection, MovieChosenSectionInfo, Movie, Details,ActorsSection} from "./style/ChoosenMovieStyle";
 import { useState, useEffect } from "react";
 import Actor from "./logic/Actor";
 
