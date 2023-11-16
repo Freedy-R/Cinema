@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const MovieCategories = () => {
 
@@ -33,9 +34,9 @@ const MovieCategories = () => {
     const renderMoviesCategories = () =>{
         
      return genres.map(genre=>(
-      <a key={genre.id} href="#">
+      <Link to={`Cinema/${genre.id}`} key={genre.id}>
         <p>{genre.name}</p>
-      </a>
+      </Link>
       ));
     }
     return(

@@ -1,17 +1,23 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { MoviePhoto } from "../style/MovieSectionStyle";
 
 const MovieSectionMovies = () => {
   const [movies, setMovies] = useState([]);
-  const moviesAll = Object.values(movies);
+  const {genre} = useParams();
+
+
 
   useEffect(() => {
-    const fetch = require("node-fetch");
-
-    const url =
-      "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=pl-PL&page=1&sort_by=popularity.desc";
-    const options = {
+    const fetchData = async () => {
+      let url;
+      if (!genre) {
+        url = "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=pl-PL&page=1&sort_by=popularity.desc";
+      } else {
+        url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=pl-PL&page=1&sort_by=popularity.desc&with_genres=${genre}`;
+      }
+      console.log(url);
+      const options = {
       method: "GET",
       headers: {
         accept: "application/json",
@@ -20,16 +26,24 @@ const MovieSectionMovies = () => {
       },
     };
 
-    fetch(url, options)
-      .then((res) => res.json())
-      .then((json) => setMovies(json.results))
-      .catch((err) => console.error("error:" + err));
-  });
+
+    try {
+      const response = await fetch(url, options);
+      const json = await response.json();
+      setMovies(json.results);
+    } catch (error) {
+      console.error("error:", error);
+    }
+  };
+
+  fetchData();
+  console.log(movies);
+}, [genre]);
 
   const renderMovies = () => {
-    return moviesAll.map((movie, index) => (
+    return movies.map((movie, index) => (
       
-      <MoviePhoto >
+      <MoviePhoto key={index}>
         <Link tabIndex="1" key={movie.id} to={`/Cinema/chosen/${movie.id}`}>
         <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.title} />
         <p>{movie.title}</p>
