@@ -22,10 +22,10 @@ export const MoviesSectionPhotoStyle = styled.section`
   @media (max-width: 480px){
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
-  @media (max-width: 768px){
+  @media (min-width:480px, max-width: 768px){
     grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
   }
-  @media (max-width: 1279px){
+  @media (min-width: 768px,max-width: 1279px){
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   }
 `;

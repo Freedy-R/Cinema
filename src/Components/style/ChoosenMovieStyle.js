@@ -8,7 +8,7 @@ export const MovieChosenSectionInfo = styled.section`
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 1fr 1fr;
   z-index: -2;
   div:nth-child(2) {
     display: flex;
