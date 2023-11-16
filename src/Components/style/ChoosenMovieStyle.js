@@ -8,7 +8,7 @@ export const MovieChosenSectionInfo = styled.section`
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 1fr;
   z-index: -2;
   div:nth-child(2) {
     display: flex;
@@ -44,8 +44,27 @@ export const Details = styled.section`
   background-color: black;
   padding: 0.25rem;
   z-index:-2;
+  gap: 0.2rem;
   h2,div,span{
     display: block;
     z-index: -1;
+  }
+  p{
+    font-size: 1.5rem;
+  }
+`;
+export const ActorsSection = styled.section`
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  padding: 0.25rem;
+  gap: 0.25rem;
+`;
+export const Actors = styled.div`
+  display: flex;
+  img{
+    width: 100%;
+    aspect-ratio: 4/3;
   }
 `;
