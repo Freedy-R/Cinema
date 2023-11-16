@@ -4,18 +4,23 @@ import { MoviePhoto } from "../style/MovieSectionStyle";
 
 const MovieSectionMovies = () => {
   const [movies, setMovies] = useState([]);
-  const {genre} = useParams();
+  const { genre, search } = useParams();
 
 
 
   useEffect(() => {
     const fetchData = async () => {
       let url;
-      if (!genre) {
+      if (!genre&&!search) {
         url = "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=pl-PL&page=1&sort_by=popularity.desc";
-      } else {
+      } 
+      if(genre) {
         url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=pl-PL&page=1&sort_by=popularity.desc&with_genres=${genre}`;
       }
+      if(search){
+        url = `https://api.themoviedb.org/3/search/movie?query=${search}&include_adult=false&language=pl-PL&page=1`;
+      }
+
       console.log(url);
       const options = {
       method: "GET",
@@ -38,7 +43,7 @@ const MovieSectionMovies = () => {
 
   fetchData();
   console.log(movies);
-}, [genre]);
+}, [genre, search]);
 
   const renderMovies = () => {
     return movies.map((movie, index) => (

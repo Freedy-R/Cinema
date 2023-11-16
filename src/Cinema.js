@@ -9,9 +9,10 @@ function Cinema() {
       <Router>
       <Navbar></Navbar>
         <Routes>
-          <Route path="Cinema/" element={<MoviesSection/>} />
-          <Route path="Cinema/:genre" element={<MoviesSection/>} />
-          <Route path="Cinema/chosen/:id" element={<ChoosenMovie/>} />
+          <Route path="Cinema/" element={<MoviesSection />} />
+          <Route path="Cinema/genre/:genre" element={<MoviesSection />} />
+          <Route path="Cinema/search/:search" element={<MoviesSection />} />
+          <Route path="Cinema/chosen/:id" element={<ChoosenMovie />} />
         </Routes>
       </Router>
     </section>

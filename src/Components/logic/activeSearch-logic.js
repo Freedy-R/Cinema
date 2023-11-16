@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import {useNavigate} from "react-router-dom"
 import search from "../icons/search.png";
 
 const ActiveSearch = () => {
@@ -6,6 +7,7 @@ const ActiveSearch = () => {
   const [inputValue, setInputValue] = useState("");
   const inputRef = useRef(null);
   const hideTimeoutRef = useRef(null);
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (inputValue === "") {
@@ -22,6 +24,12 @@ const ActiveSearch = () => {
     if (!visible) {
       setVisible(true);
       clearTimeout(hideTimeoutRef.current);
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      navigate(`/Cinema/search/${inputValue}`)
     }
   };
 
@@ -54,6 +62,7 @@ const ActiveSearch = () => {
         onBlur={handleBlur}
         value={inputValue}
         onChange={handleInputChange}
+        onKeyDown={handleKeyPress}
       />
     </section>
   ) : null;

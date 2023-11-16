@@ -34,7 +34,7 @@ const MovieCategories = () => {
     const renderMoviesCategories = () =>{
         
      return genres.map(genre=>(
-      <Link to={`Cinema/${genre.id}`} key={genre.id}>
+      <Link to={`Cinema/genre/${genre.id}`} key={genre.id}>
         <p>{genre.name}</p>
       </Link>
       ));
