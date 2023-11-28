@@ -25,8 +25,8 @@ export const Movie = styled.section`
   width: 100%;
   z-index: -2;
   img {
-    width: 50%;
-    aspect-ratio: 4/3;
+    max-width: 100%;
+    aspect-ratio: 16/9;
     border-radius: 10px;
     transform: translateY(50px);
     @media (max-width: 760px) {
