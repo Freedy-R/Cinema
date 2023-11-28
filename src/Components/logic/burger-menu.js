@@ -12,12 +12,14 @@ const BurgerMenuButton = () => {
     setIsActive(false);
   }
   return (
+    <>
     <button onClick={burger_menuClick}>
       <img className="burger_menu_logo" src={burgerMenu_Icon} alt="menu"></img>
-      <section onClick={holdWindowVisible} className={isActive ? 'burger_menu_movies_section slide' : 'burger_menu_movies_section hidden'}>
-        <MovieCategoryList></MovieCategoryList>
-      </section>
     </button>
+    <section onClick={holdWindowVisible} className={isActive ? 'burger_menu_movies_section' : 'burger_menu_movies_section hidden'}>
+        <MovieCategoryList></MovieCategoryList>
+    </section>
+    </>
   );
 };
 export default BurgerMenuButton;

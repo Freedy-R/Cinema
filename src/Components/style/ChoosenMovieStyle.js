@@ -9,7 +9,7 @@ export const MovieChosenSectionInfo = styled.section`
   width: 100%;
   height: 100%;
   grid-template-rows: auto 1fr;
-  z-index: -2;
+  z-index: 2;
   div:nth-child(2) {
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@ export const Movie = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
-  z-index: -2;
+  z-index: 1;
   img {
     max-width: 100%;
     aspect-ratio: 16/9;
@@ -43,11 +43,10 @@ export const Details = styled.section`
   align-items: start;
   background-color: black;
   padding: 0.25rem;
-  z-index:-2;
+  z-index: 1;
   gap: 0.2rem;
   h2,div,span{
     display: block;
-    z-index: -1;
   }
   p{
     font-size: 1.5rem;

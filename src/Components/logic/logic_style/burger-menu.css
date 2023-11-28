@@ -11,7 +11,7 @@
     height: 100%;
     left: 0;
     top: 0;
-    z-index: -1;
+    z-index: 2;
     transition: all 3s ease;
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
