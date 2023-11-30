@@ -24,7 +24,7 @@ export const Movie = styled.section`
   width: 100%;
   z-index: 1;
   img {
-    max-width: 100%;
+    min-width: 100%;
     aspect-ratio: 16/9;
     border-radius: 10px;
     @media (max-width: 760px) {
