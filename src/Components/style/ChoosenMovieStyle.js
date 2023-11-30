@@ -21,14 +21,12 @@ export const MovieChosenSectionInfo = styled.section`
 export const Movie = styled.section`
   position: relative;
   display: flex;
-  justify-content: center;
   width: 100%;
   z-index: 1;
   img {
     max-width: 100%;
     aspect-ratio: 16/9;
     border-radius: 10px;
-    transform: translateY(50px);
     @media (max-width: 760px) {
       width: 100%;
     }
@@ -57,6 +55,7 @@ export const ActorsSection = styled.section`
   width: 100%;
   height: 100%;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-rows: 2fr;
   padding: 0.25rem;
   gap: 0.25rem;
 `;
@@ -64,6 +63,6 @@ export const Actors = styled.div`
   display: flex;
   img{
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 1/1;
   }
 `;
