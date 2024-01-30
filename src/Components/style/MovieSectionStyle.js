@@ -2,6 +2,7 @@ import styled from "styled-components";
 export const MoviesSectionStyle = styled.section`
   display: grid;
   grid-template-rows: auto 1fr;
+  
 `;
 export const MoviesBanner = styled.section`
   position: relative;

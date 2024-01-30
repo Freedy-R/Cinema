@@ -8,7 +8,7 @@ export const MovieChosenSectionInfo = styled.section`
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 4fr;
   z-index: 2;
   div:nth-child(2) {
     display: flex;
@@ -20,20 +20,13 @@ export const MovieChosenSectionInfo = styled.section`
 `;
 export const Movie = styled.section`
   position: relative;
-  display: flex;
-  width: 100%;
   z-index: 1;
-  img {
-    min-width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 10px;
-    @media (max-width: 760px) {
-      width: 100%;
-    }
-  }
-  @media (max-width: 760px) {
-    justify-content: start;
-  }
+  height:80vh;
+  background-image: ${(props) => `url(https://image.tmdb.org/t/p/original/${props.src})`};
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  bacground-attachment: fixed;
 `;
 export const Details = styled.section`
   display: flex;

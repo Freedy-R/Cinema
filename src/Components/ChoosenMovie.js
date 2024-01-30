@@ -46,8 +46,7 @@ const ChoosenMovie = () => {
   return (
     <MovieChosenSection>
       <MovieChosenSectionInfo>
-        <Movie>
-          <img src={"https://image.tmdb.org/t/p/original/" + movie.poster_path} alt="movie poster" />
+        <Movie src={movie.poster_path}>
         </Movie>
         <Details>
           <h2>{movie.original_title}</h2>
