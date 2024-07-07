@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Cinema/static/css/main.3ec879e4.css",
-    "main.js": "/Cinema/static/js/main.45dfe3cf.js",
-    "static/js/787.9cf49f21.chunk.js": "/Cinema/static/js/787.9cf49f21.chunk.js",
-    "static/media/kfl9dvlt.bmp": "/Cinema/static/media/kfl9dvlt.61a24460ddc475d220e9.bmp",
+    "main.css": "/Cinema/static/css/main.e4150855.css",
+    "main.js": "/Cinema/static/js/main.40a85f54.js",
+    "static/js/488.3af395f7.chunk.js": "/Cinema/static/js/488.3af395f7.chunk.js",
+    "static/media/banner2.jpg": "/Cinema/static/media/banner2.ce9755ba697e63e74981.jpg",
     "index.html": "/Cinema/index.html",
-    "main.3ec879e4.css.map": "/Cinema/static/css/main.3ec879e4.css.map",
-    "main.45dfe3cf.js.map": "/Cinema/static/js/main.45dfe3cf.js.map",
-    "787.9cf49f21.chunk.js.map": "/Cinema/static/js/787.9cf49f21.chunk.js.map"
+    "main.e4150855.css.map": "/Cinema/static/css/main.e4150855.css.map",
+    "main.40a85f54.js.map": "/Cinema/static/js/main.40a85f54.js.map",
+    "488.3af395f7.chunk.js.map": "/Cinema/static/js/488.3af395f7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ec879e4.css",
-    "static/js/main.45dfe3cf.js"
+    "static/css/main.e4150855.css",
+    "static/js/main.40a85f54.js"
   ]
 }
